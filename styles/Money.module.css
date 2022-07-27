@@ -1,0 +1,17 @@
+.coin {
+  width: 90px;
+  height: 90px;
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-image: url("/assets/coin.png");
+  background-size: cover;
+}
+
+.money-text {
+  text-align: center;
+  position: relative;
+  top: 35px;
+  font-size: 16px;
+}
