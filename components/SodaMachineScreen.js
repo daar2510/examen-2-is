@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 import styles from "/styles/SodaMachineScreen.module.css";
-import { titles } from "../constants/text";
 
-const SodaMachineScreen = ({ inventory }) => {
+const SodaMachineScreen = ({ title, inventory }) => {
   return (
     <div className={styles.screen}>
-      <p className={styles.title}>{titles.inventory}</p>
+      <p className={styles.title}>{title}</p>
       <ul className={styles.list}>
         {inventory.map((item) => (
           <li key={item.sodaName} className={styles.item}>
@@ -19,6 +18,7 @@ const SodaMachineScreen = ({ inventory }) => {
 };
 
 SodaMachineScreen.propTypes = {
+  title: PropTypes.string.isRequired,
   inventory: PropTypes.arrayOf(
     PropTypes.shape({
       sodaName: PropTypes.string.isRequired,

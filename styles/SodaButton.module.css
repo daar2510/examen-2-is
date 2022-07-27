@@ -13,7 +13,8 @@
   filter: brightness(1.1);
 }
 .soda-btn:active {
-  transform: scale(1.07);
+  transform: scale(1.05);
+  transition: transform 0.1s;
   filter: brightness(0.9);
 }
 
@@ -30,8 +31,8 @@
   overflow: hidden;
 }
 
-.coca {
-  background-image: url("/assets/coca-logo.jpeg");
+.coca-cola {
+  background-image: url("/assets/coca-cola-logo.jpeg");
 }
 
 .fanta {
