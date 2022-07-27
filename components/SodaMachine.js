@@ -38,10 +38,10 @@ const SodaMachine = () => {
           <SodaMachineScreen inventory={inventory} />
           <MoneyReader />
           <div className={styles["btn-group"]}>
-            <SodaButton soda="coca" />
-            <SodaButton soda="sprite" />
-            <SodaButton soda="fanta" />
-            <SodaButton soda="pepsi" />
+            <SodaButton soda="coca" price={500}/>
+            <SodaButton soda="sprite" price={725} />
+            <SodaButton soda="fanta" price={550} />
+            <SodaButton soda="pepsi" price={600} />
           </div>
         </div>
       </div>
