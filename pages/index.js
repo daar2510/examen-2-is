@@ -1,7 +1,5 @@
-import SodaMachine from '../components/SodaMachine'
+import SodaMachine from "../components/SodaMachine";
 
 export default function Home() {
-  return (
-    <SodaMachine />
-  )
+  return <SodaMachine />;
 }
