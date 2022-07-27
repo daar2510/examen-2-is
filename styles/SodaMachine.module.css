@@ -49,3 +49,15 @@
   flex-direction: column;
   row-gap: 10px;
 }
+
+.zoom-enabled {
+  transform: scale(2.5);
+  transition: transform 0.5s;
+  transform-origin: right 17%;
+}
+
+.zoom-disabled {
+  transform: scale(1);
+  transition: transform 0.5s;
+  transform-origin: right 17%;
+}

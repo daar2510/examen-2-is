@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Walter Turncoat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -28,6 +28,17 @@ a {
 @font-face {
   font-family: "DS-Digital";
   src: local("DS-Digital"),
-    url("/assets/fonts/DS-Digital.TTF") format("truetype");
+    url("/assets/fonts/DS-Digital.ttf") format("truetype");
   font-weight: normal;
+}
+
+@font-face {
+  font-family: "Walter Turncoat";
+  src: local("Walter Turncoat"),
+    url("/assets/fonts/WalterTurncoat.ttf") format("truetype");
+  font-weight: normal;
+}
+
+html {
+  overflow: hidden;
 }
