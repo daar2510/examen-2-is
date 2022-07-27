@@ -5,8 +5,6 @@ import Money from "./Money";
 import styles from "/styles/MyMoney.module.css";
 
 const MyMoney = ({
-  total,
-  setTotal,
   isOpen,
   setIsOpen,
   anchorElement,
@@ -18,8 +16,6 @@ const MyMoney = ({
         <Money
           key={coin.value}
           value={coin.value}
-          total={total}
-          setTotal={setTotal}
         />
       );
     });
@@ -57,8 +53,6 @@ const MyMoney = ({
 };
 
 MyMoney.propTypes = {
-  total: PropTypes.number.isRequired,
-  setTotal: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
   anchorElement: PropTypes.object,

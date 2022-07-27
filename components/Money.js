@@ -1,7 +1,9 @@
 import styles from "/styles/Money.module.css";
 import PropTypes from "prop-types";
+import { useMachineContext } from "./MachineContextProvider";
 
-const Money = ({ value, total, setTotal }) => {
+const Money = ({ value }) => {
+  const { total, setTotal } = useMachineContext();
   return (
     <div
       className={styles.coin}
@@ -16,8 +18,6 @@ const Money = ({ value, total, setTotal }) => {
 
 Money.propTypes = {
   value: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  setTotal: PropTypes.func.isRequired,
 };
 
 export default Money;

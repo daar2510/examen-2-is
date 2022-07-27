@@ -1,11 +1,10 @@
 import Image from "next/image";
 import styles from "/styles/Menu.module.css";
 import { useState } from "react";
-import PropTypes from "prop-types";
 import MyMoney from "./MyMoney";
 import { titles } from "../constants/text";
 
-const Menu = ({ total, setTotal }) => {
+const Menu = () => {
   const [myMoneyref, setMyMoneyRef] = useState(null);
   const [isMyMoneyOpened, setIsMyMoneyOpened] = useState(false);
   const handleMyMoneyClick = (event) => {
@@ -15,8 +14,6 @@ const Menu = ({ total, setTotal }) => {
   return (
     <>
       <MyMoney
-        total={total}
-        setTotal={setTotal}
         isOpen={isMyMoneyOpened}
         setIsOpen={setIsMyMoneyOpened}
         anchorElement={myMoneyref}
@@ -56,11 +53,6 @@ const Menu = ({ total, setTotal }) => {
       </div>
     </>
   );
-};
-
-Menu.propTypes = {
-  total: PropTypes.number.isRequired,
-  setTotal: PropTypes.func.isRequired,
 };
 
 export default Menu;
