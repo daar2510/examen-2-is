@@ -26,7 +26,7 @@ const MyMoney = ({
   };
 
   return (
-    <Popper open={isOpen} anchorEl={anchorElement} placement="auto">
+    <Popper open={isOpen} anchorEl={anchorElement} placement="auto-end">
       <Badge
         badgeContent={
           <span
