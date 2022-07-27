@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "/styles/SodaMachineScreen.module.css";
 
-const SodaMachineScreen = ({title, inventory }) => {
+const SodaMachineScreen = ({ title, inventory }) => {
   return (
     <div className={styles.screen}>
       <p className={styles.title}>{title}</p>
@@ -18,6 +18,7 @@ const SodaMachineScreen = ({title, inventory }) => {
 };
 
 SodaMachineScreen.propTypes = {
+  title: PropTypes.string.isRequired,
   inventory: PropTypes.arrayOf(
     PropTypes.shape({
       sodaName: PropTypes.string.isRequired,

@@ -16,6 +16,7 @@ const SodaButton = ({ soda, price, onClick }) => {
 SodaButton.propTypes = {
   soda: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default SodaButton;

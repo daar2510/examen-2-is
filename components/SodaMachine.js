@@ -29,7 +29,7 @@ const SodaMachine = () => {
     setPurchaseStarted(true);
     const newSodaSelection = [...sodaSelection];
     newSodaSelection.pop();
-    
+
     const sodaIndex = newSodaSelection.findIndex((soda) =>
       soda.sodaName.includes(sodaName)
     );
@@ -44,11 +44,11 @@ const SodaMachine = () => {
         sodaName,
         newQuantity
       );
-      
+
       if (newQuantity > inventoryState[inventoryIndex].quantity) {
         setError(true);
         newSodaSelection.splice(sodaIndex, 1);
-        if (newSodaSelection.length === 0){
+        if (newSodaSelection.length === 0) {
           setPurchaseStarted(false);
         }
         setTimeout(() => {
@@ -61,7 +61,10 @@ const SodaMachine = () => {
         quantity: calculatePrice(sodaName, 1),
       });
     }
-    newSodaSelection.push({sodaName: "total", quantity: calculateTotal(newSodaSelection)});
+    newSodaSelection.push({
+      sodaName: "total",
+      quantity: calculateTotal(newSodaSelection),
+    });
     setSodaSelection(newSodaSelection);
   };
 
