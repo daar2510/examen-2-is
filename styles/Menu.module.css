@@ -1,0 +1,31 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item-text {
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+.item-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  transition: transform 0.2s;
+}
+
+.item-icon:active {
+  filter: brightness(0.9);
+}
+
+.item-icon {
+  transition: transform 0.1s;
+}
