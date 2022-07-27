@@ -1,4 +1,4 @@
-export default sodas = [
+export const sodas = [
   {
     name: "coca-cola",
     price: 500,
