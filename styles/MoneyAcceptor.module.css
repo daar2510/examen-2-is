@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px;
+  gap: 12px;
+  width: 70.68px;
+  height: 78.25px;
+  border: 1px solid #969696;
+  border-radius: 2px;
+}
+
+.money-acceptor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 10px;
+  border: 1px solid #969696;
+  border-radius: 2px;
+}
+
+.bill-slot {
+  width: 34px;
+  height: 2px;
+  background: #94f169;
+  border: 0.2px solid #d9d9d9;
+  border-radius: 1px;
+}
+
+.coin-slot {
+  width: 57px;
+  height: 34px;
+  background: radial-gradient(
+    323.68% 323.68% at 35.9% -242.11%,
+    #d9d9d9 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  border: 1px solid #969696;
+}

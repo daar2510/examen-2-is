@@ -2,6 +2,7 @@ import styles from "/styles/SodaMachine.module.css";
 import Image from "next/image";
 import SodaMachineScreen from "./SodaMachineScreen";
 import inventory from "../constants/inventory";
+import MoneyReader from "./MoneyAcceptor";
 
 const SodaMachine = () => {
   return (
@@ -18,6 +19,7 @@ const SodaMachine = () => {
         <div className={styles.divider} />
       </div>
       <SodaMachineScreen inventory={inventory} />
+      <MoneyReader />
     </>
   );
 };
