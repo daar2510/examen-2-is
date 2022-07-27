@@ -3,6 +3,7 @@ import Image from "next/image";
 import SodaMachineScreen from "./SodaMachineScreen";
 import inventory from "../constants/inventory";
 import MoneyReader from "./MoneyAcceptor";
+import SodaButton from "./SodaButton";
 
 const SodaMachine = () => {
   return (
@@ -17,9 +18,17 @@ const SodaMachine = () => {
           />
         </div>
         <div className={styles.divider} />
+        <div className={styles["right-section"]}>
+          <SodaMachineScreen inventory={inventory} />
+          <MoneyReader />
+          <div className={styles["btn-group"]}>
+            <SodaButton soda="coca" />
+            <SodaButton soda="sprite" />
+            <SodaButton soda="fanta" />
+            <SodaButton soda="pepsi" />
+          </div>
+        </div>
       </div>
-      <SodaMachineScreen inventory={inventory} />
-      <MoneyReader />
     </>
   );
 };
