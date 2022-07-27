@@ -1,35 +1,35 @@
 .soda-machine {
-    display: inline-flex;
-    flex-direction: row;
-    width: 518.74px;
-    height: 857px;
-    left: 497px;
-    top: 224px;
-    background: radial-gradient(
-        611.31% 183.08% at -288.93% -49.54%,
-        #b6b6b6 0%,
-        #000000 100%
-    );
-    border: 1px solid #000000;
-    border-radius: 2px;
+  display: inline-flex;
+  flex-direction: row;
+  width: 518.74px;
+  height: 857px;
+  left: 497px;
+  top: 224px;
+  background: radial-gradient(
+    611.31% 183.08% at -288.93% -49.54%,
+    #b6b6b6 0%,
+    #000000 100%
+  );
+  border: 1px solid #000000;
+  border-radius: 2px;
 }
 
 .banner {
-    display: inline-block;
-    width: 362.24px;
-    height: 816.61px;
-    margin-top: 27.77px;
-    margin-left: 32.82px;
+  display: inline-block;
+  width: 362.24px;
+  height: 816.61px;
+  margin-top: 27.77px;
+  margin-left: 32.82px;
 }
 
 .divider {
-    display: inline-block;
-    width: 12.62px;
-    height: 857px;
-    margin-top: -0.8px;
-    margin-left: 20.19px;
-    border-width: 0px 1px;
-    border-style: solid;
-    border-color: #969696;
-    mix-blend-mode: hard-light;
+  display: inline-block;
+  width: 12.62px;
+  height: 857px;
+  margin-top: -0.8px;
+  margin-left: 20.19px;
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #969696;
+  mix-blend-mode: hard-light;
 }

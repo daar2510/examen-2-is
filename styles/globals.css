@@ -24,3 +24,10 @@ a {
     background: white;
   }
 }
+
+@font-face {
+  font-family: "DS-Digital";
+  src: local("DS-Digital"),
+    url("/assets/fonts/DS-Digital.TTF") format("truetype");
+  font-weight: normal;
+}
