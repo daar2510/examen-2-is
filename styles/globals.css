@@ -1,9 +1,8 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Walter Turncoat", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -12,15 +11,35 @@ a {
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
+}
+
+@font-face {
+  font-family: "DS-Digital";
+  src: local("DS-Digital"),
+    url("/assets/fonts/DS-Digital.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Walter Turncoat";
+  src: local("Walter Turncoat"),
+    url("/assets/fonts/WalterTurncoat.ttf") format("truetype");
+  font-weight: normal;
+}
+
+html {
+  overflow: hidden;
 }

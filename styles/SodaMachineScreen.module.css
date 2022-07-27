@@ -1,0 +1,22 @@
+.screen {
+  width: 70.68px;
+  height: 59.32px;
+  background: #000000;
+  border: 1px solid #4b4b4b;
+  border-radius: 3px;
+  font-family: "DS-Digital", sans-serif;
+  color: #00ff29;
+  padding: 0 7.5px;
+}
+
+.title {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.item {
+  font-size: 7px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6px;
+}
