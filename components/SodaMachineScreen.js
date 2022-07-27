@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import styles from "/styles/SodaMachineScreen.module.css";
-import constants from "/constants/common";
+import { titles } from "../constants/text";
 
 const SodaMachineScreen = ({ inventory }) => {
   return (
     <div className={styles.screen}>
-      <p className={styles.title}>{constants.inventory}</p>
+      <p className={styles.title}>{titles.inventory}</p>
       <ul className={styles.list}>
         {inventory.map((item) => (
           <li key={item.sodaName} className={styles.item}>
