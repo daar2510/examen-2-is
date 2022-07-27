@@ -5,6 +5,13 @@ export const inventory = [
   { sodaName: "pepsi", quantity: 8 },
 ];
 
+export const machineCoins = [
+  { coin: 500, quantity: 20 },
+  { coin: 100, quantity: 30 },
+  { coin: 50, quantity: 50 },
+  { coin: 25, quantity: 25 },
+];
+
 export const soda1 = {
   soda: "coca-cola",
   price: 500,
