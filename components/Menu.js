@@ -24,15 +24,33 @@ const Menu = ({ total, setTotal }) => {
       />
       <div className={styles.menu}>
         <div className={styles.item} onClick={handleMyMoneyClick}>
-          <Image className={styles["item-icon"]} src="/assets/coins.png" alt="coin" width={80} height={80} />
+          <Image
+            className={styles["item-icon"]}
+            src="/assets/coins.png"
+            alt="coin"
+            width={80}
+            height={80}
+          />
           <span className={styles["item-text"]}>{titles.money}</span>
         </div>
         <div className={styles.item}>
-          <Image className={styles["item-icon"]} src="/assets/book.png" alt="book" width={80} height={80} />
+          <Image
+            className={styles["item-icon"]}
+            src="/assets/book.png"
+            alt="book"
+            width={80}
+            height={80}
+          />
           <span className={styles["item-text"]}>{titles.tutorial}</span>
         </div>
         <div className={styles.item}>
-          <Image className={styles["item-icon"]} src="/assets/tool.png" alt="tool" width={80} height={80} />
+          <Image
+            className={styles["item-icon"]}
+            src="/assets/tool.png"
+            alt="tool"
+            width={80}
+            height={80}
+          />
           <span className={styles["item-text"]}>{titles.settings}</span>
         </div>
       </div>

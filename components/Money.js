@@ -18,6 +18,6 @@ Money.propTypes = {
   value: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
   setTotal: PropTypes.func.isRequired,
-}
+};
 
 export default Money;
