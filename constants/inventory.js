@@ -6,7 +6,7 @@ export const inventory = [
 ];
 
 export const soda1 = {
-  soda: "coca",
+  soda: "coca-cola",
   price: 500,
 };
 
