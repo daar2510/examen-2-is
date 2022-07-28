@@ -27,3 +27,14 @@ export const addSodaToCurrentSelection = (userSodaSelection, sodaToAdd) => {
 export const insertCoin = (totalToPay, coin) => {
   return totalToPay - coin;
 };
+
+export const updateInventory = (inventory, boughtItems) => {
+  const newInventory = [...inventory];
+  boughtItems.forEach((boughtItem) => {
+    const index = newInventory.findIndex((inventorySoda) => {
+      return inventorySoda.name === boughtItem.soda;
+    });
+    newInventory[index].quantity -= boughtItem.quantity;
+  });
+  return newInventory;
+};
