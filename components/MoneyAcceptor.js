@@ -16,10 +16,11 @@ const MoneyAcceptor = () => {
 
   useEffect(() => {
     if (total < 0) {
-      const { change, remaingAmountToReturn, remainingCoins } =
+      const { change, remainingAmountToReturn, remainingCoins } =
         calculateChangeCoins(-total, machineCoins);
-      if (remaingAmountToReturn > 0) {
+      if (remainingAmountToReturn > 0) {
         setNoChangeError(true);
+        setChangeCoins([]);
         setAreSodasDispensed(false);
         setHasPurchaseStarted(false);
         setUserSodaSelection([]);
