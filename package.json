@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write ./**/*.{js,css} && prettier --write *.{js,json}",
-    "test": "jest --verbose true"
+    "test": "jest --verbose true",
+    "ui-test": "node **/UITest.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -25,9 +26,11 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "chromedriver": "^103.0.0",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "selenium-webdriver": "^4.3.1"
   }
 }
