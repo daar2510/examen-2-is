@@ -5,6 +5,7 @@ import MyMoney from "./MyMoney";
 import { titles } from "../constants/text";
 import { menuIconSize } from "../constants/size";
 import Tutorial from "./Tutorial";
+import Settings from "./Settings";
 
 const Menu = () => {
   const [myMoneyref, setMyMoneyRef] = useState(null);
@@ -19,6 +20,12 @@ const Menu = () => {
     setTutorialRef(tutorialRef ? null : event.currentTarget);
     setIsTutorialOpened(!isTutorialOpened);
   };
+  const [settingsRef, setSettingsRef] = useState(null);
+  const [isSettingsOpened, setIsSettingsOpened] = useState(false);
+  const handleSettingsClick = (event) => {
+    setSettingsRef(settingsRef ? null : event.currentTarget);
+    setIsSettingsOpened(!isSettingsOpened);
+  }
   return (
     <>
       <MyMoney
@@ -32,6 +39,12 @@ const Menu = () => {
         setIsOpen={setIsTutorialOpened}
         anchorElement={tutorialRef}
         setAnchorElement={setTutorialRef}
+      />
+      <Settings
+        isOpen={isSettingsOpened}
+        setIsOpen={setIsSettingsOpened}
+        anchorElement={settingsRef}
+        setAnchorElement={setSettingsRef}
       />
       <div className={styles.menu}>
         <div className={styles.item} onClick={handleMyMoneyClick}>
@@ -54,7 +67,7 @@ const Menu = () => {
           />
           <span className={styles["item-text"]}>{titles.tutorial}</span>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={handleSettingsClick}>
           <Image
             className={styles["item-icon"]}
             src="/assets/tool.png"
