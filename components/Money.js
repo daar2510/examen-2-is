@@ -11,7 +11,11 @@ const Money = ({ value }) => {
   const handleCoinClick = () => {
     if (hasPurchaseStarted && !areSodasDispensed) {
       const newTotal = insertCoin(total, value);
-      if (newTotal <= 0 && hasPurchaseStarted) setAreSodasDispensed(true);
+      if (newTotal <= 0 && hasPurchaseStarted) {
+        setTimeout(() => {
+          setAreSodasDispensed(true);
+        }, 250);
+      }
       setTotal(newTotal);
     }
   };
