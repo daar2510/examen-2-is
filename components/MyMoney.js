@@ -4,20 +4,10 @@ import PropTypes from "prop-types";
 import Money from "./Money";
 import styles from "/styles/MyMoney.module.css";
 
-const MyMoney = ({
-  isOpen,
-  setIsOpen,
-  anchorElement,
-  setAnchorElement,
-}) => {
+const MyMoney = ({ isOpen, setIsOpen, anchorElement, setAnchorElement }) => {
   const renderCoins = () => {
     return coins.map((coin) => {
-      return (
-        <Money
-          key={coin.value}
-          value={coin.value}
-        />
-      );
+      return <Money key={coin.value} value={coin.value} />;
     });
   };
 
