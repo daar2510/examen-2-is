@@ -35,7 +35,9 @@ const SodaMachineScreen = () => {
       return (
         <div className={styles.field} key={soda.name}>
           <p>{soda.name}</p>
-          <p>{soda.quantity}</p>
+          <p className={soda.quantity === 0 ? styles.error : ""}>
+            {soda.quantity}
+          </p>
         </div>
       );
     });
