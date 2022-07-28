@@ -18,3 +18,12 @@ export const titles = {
   collectSoda: "No olvides recoger tu refresco",
   outOfService: "Fuera de servicio",
 };
+
+export const tutorial = [
+  "Bienvenido a la máquina expendedora de refrescos.",
+  "Puedes pulsar la barra espaciadora para acercarte más a la máquina.",
+  "Para comenzar una compra, pulsa los botones de refrescos. Por cada toque se agregara un refresco de ese tipo a tu compra.",
+  "Para pagar, abre tus monedas y pulsa cada moneda para introducirla en la máquina.",
+  "Una vez el monto total esté pagado, recibirás tu vuelto, si es que lo hay y recibiras también tu refresco.",
+  "Recuerda reclamar tu vuelto dando click sobre las monedas y recoge tus refrescos dando click en el dispensador de la máquina.",
+];
