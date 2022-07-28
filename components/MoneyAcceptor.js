@@ -23,7 +23,6 @@ const MoneyAcceptor = () => {
         setAreSodasDispensed(false);
         setHasPurchaseStarted(false);
         setUserSodaSelection([]);
-        setTotal(0);
 
         setTimeout(() => {
           setNoChangeError(false);
@@ -32,8 +31,19 @@ const MoneyAcceptor = () => {
         setChangeCoins(change);
         setMachineCoins(remainingCoins);
       }
+      setTotal(0);
     }
-  }, [total]);
+  }, [
+    total,
+    machineCoins,
+    setTotal,
+    setMachineCoins,
+    setNoChangeError,
+    setAreSodasDispensed,
+    setHasPurchaseStarted,
+    setUserSodaSelection,
+    setChangeCoins,
+  ]);
 
   return (
     <div className={styles.container}>
