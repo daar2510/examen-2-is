@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { calculateChangeCoins } from "/logic/soda";
 import { noChangeErrorTimeout } from "/constants/time";
 import Image from "next/image";
+import { coinPileHeight, coinPileWidth } from "../constants/size";
 
 const MoneyAcceptor = () => {
   const { changeCoins, setChangeCoins } = useMachineContext();
@@ -45,8 +46,8 @@ const MoneyAcceptor = () => {
             <Image
               src="/assets/coin-pile.png"
               alt="coin pile"
-              width={50}
-              height={20}
+              width={coinPileWidth}
+              height={coinPileHeight}
               onClick={() => {
                 setChangeCoins([]);
               }}
