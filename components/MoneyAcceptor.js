@@ -5,6 +5,7 @@ import { calculateChangeCoins } from "/logic/soda";
 import { noChangeErrorTimeout } from "/constants/time";
 import Image from "next/image";
 import { coinPileHeight, coinPileWidth } from "../constants/size";
+import { updateSodasDispensedTimeout } from "../constants/time";
 
 const MoneyAcceptor = () => {
   const { changeCoins, setChangeCoins } = useMachineContext();
@@ -19,11 +20,13 @@ const MoneyAcceptor = () => {
       const { change, remainingAmountToReturn, remainingCoins } =
         calculateChangeCoins(-total, machineCoins);
       if (remainingAmountToReturn > 0) {
-        setNoChangeError(true);
-        setChangeCoins([]);
-        setAreSodasDispensed(false);
-        setHasPurchaseStarted(false);
-        setUserSodaSelection([]);
+        setTimeout(() => {
+          setNoChangeError(true);
+          setChangeCoins([]);
+          setAreSodasDispensed(false);
+          setHasPurchaseStarted(false);
+          setUserSodaSelection([]);
+        }, updateSodasDispensedTimeout);
 
         setTimeout(() => {
           setNoChangeError(false);
