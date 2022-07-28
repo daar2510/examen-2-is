@@ -64,8 +64,9 @@
 }
 
 .price {
+  font-family: "Walter Turncoat", sans-serif;
   font-size: 6px;
   line-height: 8px;
   color: #399f49;
-  margin-left: -4px;
+  margin-left: -1.7px;
 }
