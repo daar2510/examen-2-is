@@ -59,3 +59,9 @@ export const calculateChangeCoins = (amountToReturn, availableCoins) => {
   });
   return { change: changeCoins, remainingAmountToReturn, remainingCoins };
 };
+
+export const sumAllCoins = (coins) => {
+  return coins.reduce((total, coin) => {
+    return total + coin.value * coin.quantity;
+  }, 0);
+};
