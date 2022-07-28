@@ -2,6 +2,7 @@ import styles from "/styles/SodaDispenser.module.css";
 import { useMachineContext } from "./MachineContextProvider";
 import Image from "next/image";
 import { updateInventory } from "/logic/soda";
+import { sodaCanHeight, sodaCanWidth } from "../constants/size";
 
 const SodaDispenser = () => {
   const { areSodasDispensed, setAreSodasDispensed } = useMachineContext();
@@ -19,8 +20,8 @@ const SodaDispenser = () => {
           key={soda}
           src={`/assets/${soda}.png`}
           alt={soda}
-          width={30}
-          height={64}
+          width={sodaCanWidth}
+          height={sodaCanHeight}
         />
       );
     });
