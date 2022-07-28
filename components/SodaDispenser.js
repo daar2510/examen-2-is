@@ -7,7 +7,7 @@ const SodaDispenser = () => {
   const { areSodasDispensed, setAreSodasDispensed } = useMachineContext();
   const { userSodaSelection, setUserSodaSelection } = useMachineContext();
   const { setHasPurchaseStarted } = useMachineContext();
-  const { total, setTotal } = useMachineContext();
+  const { setTotal } = useMachineContext();
   const { inventory, setInventory } = useMachineContext();
 
   const renderSodaCans = () => {
