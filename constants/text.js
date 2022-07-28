@@ -1,7 +1,8 @@
 export const titles = {
   homeTitle: "MÁQUINA EXPENDEDORA DE REFRESCOS",
-  inventory: "Inventario",
-  purchase: "Tu Compra",
+  inventory: "INVENTARIO",
+  purchase: "TU COMPRA",
+  priceToPay: "POR PAGAR",
   money: "MI DINERO",
   tutorial: "VER TUTORIAL",
   settings: "AJUSTES",
