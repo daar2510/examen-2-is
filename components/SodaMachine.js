@@ -12,7 +12,6 @@ import SodaDispenser from "./SodaDispenser";
 
 const SodaMachine = () => {
   const { isZoomEnabled, setIsZoomEnabled } = useMachineContext();
-  const { quantityError } = useMachineContext();
 
   const handleKeyDown = useCallback(
     (event) => {
@@ -32,7 +31,7 @@ const SodaMachine = () => {
 
   return (
     <>
-      <ErrorAlert error={titles.quantityError} isVisible={quantityError} />
+      <ErrorAlert />
       <div
         className={`${styles["soda-machine"]} ${
           isZoomEnabled ? styles["zoom-enabled"] : styles["zoom-disabled"]
