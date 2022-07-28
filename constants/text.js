@@ -16,4 +16,5 @@ export const titles = {
   currencyName: "colones",
   thanks: "Gracias por tu compra",
   collectSoda: "No olvides recoger tu refresco",
+  outOfService: "Fuera de servicio",
 };
