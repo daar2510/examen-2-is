@@ -13,15 +13,13 @@ const ErrorAlert = () => {
       setCurrentError(titles.quantityError);
     } else if (noChangeError) {
       setCurrentError(titles.noChangeError);
-    } else {
-      setCurrentError(null);
     }
   }, [quantityError, noChangeError]);
 
   return (
     <div
       className={`${styles.alert} ${
-        currentError ? styles.visible : styles.invisible
+        quantityError || noChangeError ? styles.visible : styles.invisible
       }`}
     >
       <Alert severity="error">{currentError}</Alert>
