@@ -6,6 +6,7 @@ import { noChangeErrorTimeout } from "/constants/time";
 import Image from "next/image";
 import { coinPileHeight, coinPileWidth } from "../constants/size";
 import { updateSodasDispensedTimeout } from "../constants/time";
+import { sumAllCoins } from "../logic/soda";
 
 const MoneyAcceptor = () => {
   const { changeCoins, setChangeCoins } = useMachineContext();
@@ -13,7 +14,7 @@ const MoneyAcceptor = () => {
   const { setHasPurchaseStarted, setAreSodasDispensed, setUserSodaSelection } =
     useMachineContext();
   const { total, setTotal } = useMachineContext();
-  const { setNoChangeError } = useMachineContext();
+  const { setNoChangeError, setNoCoinsError } = useMachineContext();
 
   useEffect(() => {
     if (total < 0) {
@@ -31,6 +32,10 @@ const MoneyAcceptor = () => {
         setTimeout(() => {
           setNoChangeError(false);
         }, noChangeErrorTimeout);
+      } else if (sumAllCoins(remainingCoins) === 0) {
+        setNoCoinsError(true);
+        setChangeCoins(change);
+        setMachineCoins(remainingCoins);
       } else {
         setChangeCoins(change);
         setMachineCoins(remainingCoins);

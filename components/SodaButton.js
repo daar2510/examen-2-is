@@ -12,6 +12,8 @@ const SodaButton = ({ soda, price }) => {
   const { setTotal } = useMachineContext();
   const { inventory } = useMachineContext();
   const { setQuantityError } = useMachineContext();
+  const { noCoinsError } = useMachineContext();
+  const { changeCoins } = useMachineContext();
 
   const handleKeyDown = (event) => {
     if (event.key === " ") {
@@ -20,7 +22,7 @@ const SodaButton = ({ soda, price }) => {
   };
 
   const handleSodaButtonClick = () => {
-    if (areSodasDispensed) return;
+    if (areSodasDispensed || noCoinsError || changeCoins.length !== 0) return;
     setHasPurchaseStarted(true);
     let newUserSodaSelection = addSodaToCurrentSelection(
       userSodaSelection,

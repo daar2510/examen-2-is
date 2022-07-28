@@ -10,6 +10,7 @@ const SodaMachineScreen = () => {
   const { inventory } = useMachineContext();
   const { total } = useMachineContext();
   const { changeCoins } = useMachineContext();
+  const { noCoinsError } = useMachineContext();
 
   const renderUserSodaSelection = () => {
     const selectionFields = userSodaSelection.map((selection) => {
@@ -89,8 +90,16 @@ const SodaMachineScreen = () => {
     );
   };
 
+  const renderOutOfService = () => {
+    return (
+      <p className={`${styles.title} ${styles.error}`}>{titles.outOfService}</p>
+    );
+  };
+
   const renderText = () => {
-    if (changeCoins.length > 0) {
+    if (!areSodasDispensed && !hasPurchaseStarted && noCoinsError) {
+      return renderOutOfService();
+    } else if (changeCoins.length > 0) {
       return renderChange();
     } else if (areSodasDispensed) {
       return renderCollectSoda();
