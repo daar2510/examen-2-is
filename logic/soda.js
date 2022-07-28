@@ -23,3 +23,7 @@ export const addSodaToCurrentSelection = (userSodaSelection, sodaToAdd) => {
   }
   return newUserSodaSelection;
 };
+
+export const insertCoin = (totalToPay, coin) => {
+  return totalToPay - coin;
+};

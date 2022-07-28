@@ -1,16 +1,23 @@
 import styles from "/styles/Money.module.css";
 import PropTypes from "prop-types";
 import { useMachineContext } from "./MachineContextProvider";
+import { insertCoin } from "/logic/soda";
 
 const Money = ({ value }) => {
   const { total, setTotal } = useMachineContext();
+  const { hasPurchaseStarted } = useMachineContext();
+  const { areSodasDispensed, setAreSodasDispensed } = useMachineContext();
+
+  const handleCoinClick = () => {
+    if (hasPurchaseStarted && !areSodasDispensed) {
+      const newTotal = insertCoin(total, value);
+      if (newTotal <= 0 && hasPurchaseStarted) setAreSodasDispensed(true);
+      setTotal(newTotal);
+    }
+  };
+
   return (
-    <div
-      className={styles.coin}
-      onClick={() => {
-        if (total > 1) setTotal(total - value);
-      }}
-    >
+    <div className={styles.coin} onClick={handleCoinClick}>
       <p className={styles["money-text"]}>{value}</p>
     </div>
   );
