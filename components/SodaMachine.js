@@ -2,7 +2,6 @@ import { useCallback, useEffect } from "react";
 import styles from "/styles/SodaMachine.module.css";
 import Image from "next/image";
 import SodaMachineScreen from "./SodaMachineScreen";
-import { titles } from "../constants/text";
 import { machineImageWidth, machineImageHeight } from "../constants/size";
 import MoneyAcceptor from "./MoneyAcceptor";
 import ErrorAlert from "./ErrorAlert";
