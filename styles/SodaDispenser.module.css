@@ -1,0 +1,27 @@
+.dispenser {
+  width: 137px;
+  height: 44px;
+  background: linear-gradient(
+    180deg,
+    #000000 1.09%,
+    rgba(255, 255, 255, 0.2) 217.49%
+  );
+  border: 1px solid #504b4b;
+}
+
+.dispenser-border {
+  position: absolute;
+  top: 719.23px;
+  left: 105.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 151px;
+  height: 59px;
+  background: radial-gradient(
+    381.48% 681.43% at -33.11% -208.47%,
+    #756f6f 0%,
+    #000000 100%
+  );
+  border-radius: 2px;
+}

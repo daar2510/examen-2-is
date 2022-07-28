@@ -8,6 +8,7 @@ import MoneyAcceptor from "./MoneyAcceptor";
 import ErrorAlert from "./ErrorAlert";
 import { useMachineContext } from "./MachineContextProvider";
 import MachineButtons from "./MachineButtons";
+import SodaDispenser from "./SodaDispenser";
 
 const SodaMachine = () => {
   const { isZoomEnabled, setIsZoomEnabled } = useMachineContext();
@@ -44,6 +45,7 @@ const SodaMachine = () => {
             width={machineImageWidth}
             height={machineImageHeight}
           />
+          <SodaDispenser />
         </div>
         <div className={styles.divider} />
         <div className={styles["right-section"]}>

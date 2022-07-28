@@ -15,6 +15,7 @@
 }
 
 .banner {
+  position: relative;
   display: inline-block;
   width: 362.24px;
   height: 816.61px;
