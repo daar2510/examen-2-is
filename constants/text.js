@@ -17,6 +17,8 @@ export const titles = {
   thanks: "Gracias por tu compra",
   collectSoda: "No olvides recoger tu refresco",
   outOfService: "Fuera de servicio",
+  resetInventory: "Restablecer inventario",
+  resetCoins: "Restablecer monedas",
 };
 
 export const tutorial = [
