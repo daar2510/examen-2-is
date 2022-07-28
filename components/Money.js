@@ -2,6 +2,7 @@ import styles from "/styles/Money.module.css";
 import PropTypes from "prop-types";
 import { useMachineContext } from "./MachineContextProvider";
 import { insertCoin } from "/logic/soda";
+import { updateSodasDispensedTimeout } from "../constants/time";
 
 const Money = ({ value }) => {
   const { total, setTotal } = useMachineContext();
@@ -14,7 +15,7 @@ const Money = ({ value }) => {
       if (newTotal <= 0 && hasPurchaseStarted) {
         setTimeout(() => {
           setAreSodasDispensed(true);
-        }, 250);
+        }, updateSodasDispensedTimeout);
       }
       setTotal(newTotal);
     }
