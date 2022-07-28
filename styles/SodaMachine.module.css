@@ -43,13 +43,6 @@
   margin-top: 95.92px;
 }
 
-.btn-group {
-  width: 67.63px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
 .zoom-enabled {
   transform: scale(2.5);
   transition: transform 0.5s;
