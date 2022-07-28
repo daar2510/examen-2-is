@@ -1,4 +1,4 @@
-import { sodas } from "/data/sodas";
+import { sodas } from "../data/sodas";
 
 export const calculatePrice = (sodaName, quantity) => {
   const soda = sodas.find((soda) => soda.name === sodaName);
@@ -57,6 +57,7 @@ export const calculateChangeCoins = (amountToReturn, availableCoins) => {
       coin.quantity--;
     }
   });
+  console.log({ change: changeCoins, remainingAmountToReturn, remainingCoins });
   return { change: changeCoins, remainingAmountToReturn, remainingCoins };
 };
 
