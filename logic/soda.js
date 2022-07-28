@@ -12,7 +12,7 @@ export const calculateTotal = (userSodaSelection) => {
 };
 
 export const addSodaToCurrentSelection = (userSodaSelection, sodaToAdd) => {
-  const newUserSodaSelection = [...userSodaSelection];
+  const newUserSodaSelection = structuredClone(userSodaSelection);
   const index = newUserSodaSelection.findIndex(
     (selection) => selection.soda === sodaToAdd
   );
@@ -29,7 +29,7 @@ export const insertCoin = (totalToPay, coin) => {
 };
 
 export const updateInventory = (inventory, boughtItems) => {
-  const newInventory = [...inventory];
+  const newInventory = structuredClone(inventory);
   boughtItems.forEach((boughtItem) => {
     const index = newInventory.findIndex((inventorySoda) => {
       return inventorySoda.name === boughtItem.soda;
@@ -37,4 +37,25 @@ export const updateInventory = (inventory, boughtItems) => {
     newInventory[index].quantity -= boughtItem.quantity;
   });
   return newInventory;
+};
+
+export const calculateChangeCoins = (amountToReturn, availableCoins) => {
+  const changeCoins = [];
+  const remainingCoins = structuredClone(availableCoins);
+  let remainingAmountToReturn = amountToReturn;
+  remainingCoins.forEach((coin) => {
+    while (remainingAmountToReturn >= coin.value && coin.quantity > 0) {
+      const index = changeCoins.findIndex((changeCoin) => {
+        return changeCoin.value === coin.value;
+      });
+      if (index !== -1) {
+        changeCoins[index].quantity++;
+      } else {
+        changeCoins.push({ value: coin.value, quantity: 1 });
+      }
+      remainingAmountToReturn -= coin.value;
+      coin.quantity--;
+    }
+  });
+  return { change: changeCoins, remainingAmountToReturn, remainingCoins };
 };
