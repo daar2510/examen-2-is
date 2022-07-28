@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styles from "/styles/SodaMachineScreen.module.css";
 import { useMachineContext } from "./MachineContextProvider";
 import { calculatePrice } from "../logic/soda";

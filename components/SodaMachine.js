@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "/styles/SodaMachine.module.css";
 import Image from "next/image";
 import SodaMachineScreen from "./SodaMachineScreen";
@@ -18,7 +18,7 @@ const SodaMachine = () => {
         setIsZoomEnabled(!isZoomEnabled);
       }
     },
-    [isZoomEnabled]
+    [isZoomEnabled, setIsZoomEnabled]
   );
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { useContext, useState, createContext } from "react";
+import PropTypes from "prop-types";
 import { sodas } from "/data/sodas";
 import { coins } from "/data/coins";
 
@@ -46,6 +47,10 @@ const MachineContextProvider = ({ children }) => {
       {children}
     </MachineContext.Provider>
   );
+};
+
+MachineContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default MachineContextProvider;
