@@ -3,6 +3,7 @@ import styles from "/styles/Menu.module.css";
 import { useState } from "react";
 import MyMoney from "./MyMoney";
 import { titles } from "../constants/text";
+import { menuIconSize } from "../constants/size";
 
 const Menu = () => {
   const [myMoneyref, setMyMoneyRef] = useState(null);
@@ -25,8 +26,8 @@ const Menu = () => {
             className={styles["item-icon"]}
             src="/assets/coins.png"
             alt="coin"
-            width={80}
-            height={80}
+            width={menuIconSize}
+            height={menuIconSize}
           />
           <span className={styles["item-text"]}>{titles.money}</span>
         </div>
@@ -35,8 +36,8 @@ const Menu = () => {
             className={styles["item-icon"]}
             src="/assets/book.png"
             alt="book"
-            width={80}
-            height={80}
+            width={menuIconSize}
+            height={menuIconSize}
           />
           <span className={styles["item-text"]}>{titles.tutorial}</span>
         </div>
@@ -45,8 +46,8 @@ const Menu = () => {
             className={styles["item-icon"]}
             src="/assets/tool.png"
             alt="tool"
-            width={80}
-            height={80}
+            width={menuIconSize}
+            height={menuIconSize}
           />
           <span className={styles["item-text"]}>{titles.settings}</span>
         </div>

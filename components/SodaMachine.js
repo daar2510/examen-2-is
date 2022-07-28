@@ -3,6 +3,7 @@ import styles from "/styles/SodaMachine.module.css";
 import Image from "next/image";
 import SodaMachineScreen from "./SodaMachineScreen";
 import { titles } from "../constants/text";
+import { machineImageWidth, machineImageHeight } from "../constants/size";
 import MoneyAcceptor from "./MoneyAcceptor";
 import ErrorAlert from "./ErrorAlert";
 import { useMachineContext } from "./MachineContextProvider";
@@ -40,8 +41,8 @@ const SodaMachine = () => {
           <Image
             src="/assets/coca-bg.png"
             alt="Soda Machine Banner"
-            width={362}
-            height={816}
+            width={machineImageWidth}
+            height={machineImageHeight}
           />
         </div>
         <div className={styles.divider} />

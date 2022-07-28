@@ -3,6 +3,7 @@ import styles from "/styles/SodaButton.module.css";
 import { useMachineContext } from "./MachineContextProvider";
 import { addSodaToCurrentSelection } from "../logic/soda";
 import { calculateTotal } from "../logic/soda";
+import { errorTimeout } from "../constants/time";
 
 const SodaButton = ({ soda, price }) => {
   const { userSodaSelection, setUserSodaSelection } = useMachineContext();
@@ -44,7 +45,7 @@ const SodaButton = ({ soda, price }) => {
       setQuantityError(true);
       setTimeout(() => {
         setQuantityError(false);
-      }, 3000);
+      }, errorTimeout);
     }
     return newUserSodaSelection;
   };
