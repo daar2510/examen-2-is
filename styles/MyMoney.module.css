@@ -15,3 +15,9 @@
   color: gray;
   transition: all 0.1s ease-in-out;
 }
+
+.highlighted {
+  color: rgb(0, 123, 255);
+  transform: scale(1.1);
+  transform-origin: 0 0;
+}

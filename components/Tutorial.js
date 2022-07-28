@@ -30,7 +30,9 @@ const Tutorial = ({ isOpen, setIsOpen, anchorElement, setAnchorElement }) => {
         >
           {tutorial.map((text, index) => (
             <div key={index}>
-              <p>{text}</p>
+              <p className={text === tutorial[1] ? styles.highlighted : ""}>
+                {text}
+              </p>
               <br />
             </div>
           ))}
