@@ -25,7 +25,7 @@ const Menu = () => {
   const handleSettingsClick = (event) => {
     setSettingsRef(settingsRef ? null : event.currentTarget);
     setIsSettingsOpened(!isSettingsOpened);
-  }
+  };
   return (
     <>
       <MyMoney
