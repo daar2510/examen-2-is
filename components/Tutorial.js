@@ -5,7 +5,7 @@ import { tutorial } from "../constants/text";
 
 const Tutorial = ({ isOpen, setIsOpen, anchorElement, setAnchorElement }) => {
   return (
-    <Popper open={isOpen} anchorEl={anchorElement} placement="auto-end">
+    <Popper open={isOpen} anchorEl={anchorElement} placement="bottom-start">
       <Badge
         badgeContent={
           <span
