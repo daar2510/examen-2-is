@@ -8,6 +8,7 @@ export const titles = {
   settings: "AJUSTES",
   quantityError:
     "No hay suficientes unidades de este producto, intenta de nuevo",
+  noChangeError: "La maquina no tiene suficientes monedas\n Intenta pagar con otras monedas o la cantidad exacta",
   change: "su vuelto es de",
   breakdown: "desglose:",
   currency: "¢",
