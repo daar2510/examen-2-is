@@ -8,6 +8,7 @@ import { errorTimeout } from "../constants/time";
 const SodaButton = ({ soda, price }) => {
   const { userSodaSelection, setUserSodaSelection } = useMachineContext();
   const { setHasPurchaseStarted } = useMachineContext();
+  const { areSodasDispensed } = useMachineContext();
   const { setTotal } = useMachineContext();
   const { inventory } = useMachineContext();
   const { setQuantityError } = useMachineContext();
@@ -19,6 +20,7 @@ const SodaButton = ({ soda, price }) => {
   };
 
   const handleSodaButtonClick = () => {
+    if (areSodasDispensed) return;
     setHasPurchaseStarted(true);
     let newUserSodaSelection = addSodaToCurrentSelection(
       userSodaSelection,
