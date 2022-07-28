@@ -52,6 +52,7 @@ const MoneyAcceptor = () => {
     setHasPurchaseStarted,
     setUserSodaSelection,
     setChangeCoins,
+    setNoCoinsError,
   ]);
 
   return (
