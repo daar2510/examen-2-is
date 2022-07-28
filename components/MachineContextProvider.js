@@ -11,13 +11,14 @@ const MachineContextProvider = ({ children }) => {
   const [isZoomEnabled, setIsZoomEnabled] = useState(false);
   const [inventory, setInventory] = useState(sodas);
   const [hasPurchaseStarted, setHasPurchaseStarted] = useState(false);
+  const [areSodasDispensed, setAreSodasDispensed] = useState(false);
   const [userSodaSelection, setUserSodaSelection] = useState([]);
   const [quantityError, setQuantityError] = useState(false);
   const [noCoinsError, setNoCoinsError] = useState(false);
   const [noChangeError, setNoChangeError] = useState(false);
   const [machineCoins, setMachineCoins] = useState(coins);
   const [changeCoins, setChangeCoins] = useState([]);
-  const [total, setTotal] = useState(1);
+  const [total, setTotal] = useState(0);
 
   const machineContext = {
     isZoomEnabled,
@@ -26,6 +27,8 @@ const MachineContextProvider = ({ children }) => {
     setInventory,
     hasPurchaseStarted,
     setHasPurchaseStarted,
+    areSodasDispensed,
+    setAreSodasDispensed,
     userSodaSelection,
     setUserSodaSelection,
     quantityError,
