@@ -57,7 +57,6 @@ export const calculateChangeCoins = (amountToReturn, availableCoins) => {
       coin.quantity--;
     }
   });
-  console.log({ change: changeCoins, remainingAmountToReturn, remainingCoins });
   return { change: changeCoins, remainingAmountToReturn, remainingCoins };
 };
 
